@@ -1,8 +1,10 @@
-# Cloud Workshop
+# ☁️ Cloud Workshop
 
-A hands-on workshop repo to explore modern web cloud architectures.
+*This repo is built iteratively and very granularly by Sean and ChatGPT. We tackle small steps one at a time, building the repo piece by piece. This method is a tool for Sean to deeply learn how each part of modern web cloud architecture works, by writing code, configuring tools, and documenting everything along the way. It's part of a series of AI-assisted tutorials. Check out other workshops at [https://seans-workshops.vercel.app/](https://seans-workshops.vercel.app/).*
 
-## Goals
+---
+
+## 🎯 Goals
 
 * Understand how Node.js web servers integrate with edge layers like HAProxy and Varnish.
 * Experiment with caching, load balancing, and reverse proxies.
@@ -10,7 +12,7 @@ A hands-on workshop repo to explore modern web cloud architectures.
 
 ---
 
-## Clone the Repository
+## 📝 Clone the Repository the Repository
 
 ```bash
 git clone git@github.com:SeanPlusPlus/cloud-workshop.git
@@ -19,7 +21,7 @@ cd cloud-workshop
 
 ---
 
-## Project Structure
+## 📁 Project Structure
 
 ```
 cloud-workshop/
@@ -30,9 +32,11 @@ cloud-workshop/
 
 ---
 
-## Running the Node.js Server
+## ▶️ Running the Node.js Server the Node.js Server
 
-Install dependencies (if using pure Node.js HTTP, none required):
+This project uses a minimal Node.js server with the native `http` module.
+
+Run the server:
 
 ```bash
 node server.js
@@ -44,7 +48,7 @@ Visit:
 http://localhost:3000
 ```
 
-You should see:
+Expected output:
 
 ```
 Hello from Node.js server!
@@ -52,11 +56,11 @@ Hello from Node.js server!
 
 ---
 
-## HAProxy Setup
+## 🔀 HAProxy Setup Setup
 
 ### haproxy.cfg
 
-Minimal example:
+A minimal HAProxy configuration:
 
 ```
 frontend http-in
@@ -67,9 +71,9 @@ backend node-backend
     server node1 127.0.0.1:3000
 ```
 
-### How to Run HAProxy
+### Running HAProxy
 
-Make sure HAProxy is installed. Then run:
+Ensure HAProxy is installed, then start it with:
 
 ```bash
 haproxy -f haproxy.cfg
@@ -89,12 +93,13 @@ Hello from Node.js server!
 
 ---
 
-## Next Steps
+## 🚀 Next Steps Steps
 
 * Add Varnish configuration and test caching.
 * Add multiple Node.js servers and test load balancing.
 * Inspect and modify HTTP headers through HAProxy or Varnish.
 * Experiment with Docker Compose to run services together.
+* Dive deeper into modern cloud architecture patterns.
 
 ---
 
