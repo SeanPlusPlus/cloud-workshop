@@ -1,6 +1,6 @@
 # ☁️ Cloud Workshop
 
-*This repo is built iteratively and very granularly by Sean and ChatGPT. We tackle small steps one at a time, building the repo piece by piece. This method is a tool for Sean to deeply learn how each part of modern web cloud architecture works, by writing code, configuring tools, and documenting everything along the way. It's part of a series of AI-assisted tutorials. Check out other workshops at [https://seans-workshops.vercel.app/](https://seans-workshops.vercel.app/).*
+*This repo is built iteratively and very granularly by Sean and ChatGPT. We tackle small steps one at a time, building the repo piece by piece. This method is a tool for me to deeply learn how each part of modern web cloud architecture works, by writing code, configuring tools, and documenting everything along the way. It's part of a series of AI-assisted tutorials. Check out other workshops at [https://seans-workshops.vercel.app/](https://seans-workshops.vercel.app/).*
 
 ---
 
