@@ -10,6 +10,15 @@ A hands-on workshop repo to explore modern web cloud architectures.
 
 ---
 
+## Clone the Repository
+
+```bash
+git clone git@github.com:SeanPlusPlus/cloud-workshop.git
+cd cloud-workshop
+```
+
+---
+
 ## Project Structure
 
 ```
