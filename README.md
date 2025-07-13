@@ -7,7 +7,7 @@
 ## 🎯 Goals
 
 * Build a minimal Node.js web server.
-* Understand how to layer HAProxy and Varnish in front of it.
+* Understand how to layer HAProxy in front of it.
 * Learn modern cloud architecture fundamentals.
 
 ---
@@ -68,7 +68,7 @@ app.listen(PORT, () => {
 node server.js
 ```
 
-Then visit:
+Visit:
 
 ```
 http://localhost:3000
@@ -82,8 +82,62 @@ Hello from Express!
 
 ---
 
+## 🔀 Installing and Running HAProxy
+
+### Install HAProxy (macOS)
+
+```bash
+brew install haproxy
+```
+
+### Create `haproxy.cfg`
+
+**haproxy.cfg**
+
+```
+global
+    log 127.0.0.1 local0 debug
+
+defaults
+    log     global
+    mode    http
+    option  httplog
+    timeout connect 5s
+    timeout client 30s
+    timeout server 30s
+
+frontend http-in
+    bind *:8080
+    default_backend node-backend
+
+backend node-backend
+    server node1 127.0.0.1:3000
+```
+
+### Run HAProxy
+
+Run HAProxy in the foreground for easier debugging:
+
+```bash
+haproxy -db -f haproxy.cfg
+```
+
+Then visit:
+
+```
+http://localhost:8080
+```
+
+✅ You should see:
+
+```
+Hello from Express!
+```
+
+---
+
 ## 🚀 Next Steps
 
-* Add HAProxy configuration to reverse-proxy to Node.js
-* Explore caching with Varnish
-* Experiment with Docker Compose
+* Add multiple Node.js servers and test load balancing.
+* Explore caching with Varnish.
+* Experiment with Docker Compose for running services together.
